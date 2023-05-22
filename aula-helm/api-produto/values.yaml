@@ -1,6 +1,9 @@
 api:
   image: alebarrionovo/pedelogo-catalogo:v1.0.0
   serviceType: NodePort
+  ingress: 
+  - aulakubedev.com.br
+  - api.aulakubedev.com.br
 
 mongodb:
   tag: 4.2.8
