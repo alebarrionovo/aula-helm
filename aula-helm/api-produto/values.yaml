@@ -6,9 +6,10 @@ api:
   - api.aulakubedev.com.br
 
 mongodb:
-  tag: 4.2.8
-  #existSecret: nome do secret
-  credentials:
-    userName: mongouser
-    userPassword: mongopwd
-  databaseName: admin
+  auth:
+    rootPassword: mongoRoot
+    username: mongouser
+    password: mongopwd
+    database: produto 
+  persistence:
+    enabled: false

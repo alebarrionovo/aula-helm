@@ -21,14 +21,5 @@ spec:
         envFrom:
           - configMapRef:
               name: {{ .Release.Name }}-api-configmap
-        env:
-          - name: Mongo__User
-            valueFrom:
-              secretKeyRef:
-                key: MONGO_INITDB_ROOT_USERNAME
-                name: {{ .Release.Name }}-mongodb-secret
-          - name: Mongo__Password
-            valueFrom:
-              secretKeyRef:
-                key: MONGO_INITDB_ROOT_PASSWORD
-                name: {{ .Release.Name }}-mongodb-secret      
+          - secretRef:
+              name: {{ .Release.Name }}-api-secret

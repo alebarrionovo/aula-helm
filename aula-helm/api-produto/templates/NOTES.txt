@@ -1,1 +1,3 @@
-Instalado
+A aplicação {{ .Release.Name }} - release {{ .Release.Revision }} foi criado com sucesso.
+
+Boa sorte!!!
